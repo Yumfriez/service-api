@@ -5,15 +5,15 @@ on:
     branches:
       - master
     paths-ignore:
-      - '.github/**'
+#      - '.github/**'
       - README.md
       - gradle.properties
 
 env:
   GH_USER_NAME: github.actor
-  SCRIPTS_VERSION: 5.4.0
+  SCRIPTS_VERSION: github-release-action
   BOM_VERSION: 5.4.0
-  MIGRATIONS_VERSION: 5.4.0
+  MIGRATIONS_VERSION: develop
 
 jobs:
   release:
