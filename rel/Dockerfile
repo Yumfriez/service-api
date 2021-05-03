@@ -1,6 +1,7 @@
 FROM openjdk:11-jre-slim
 LABEL version=5.4.2 description="EPAM Report portal. Main API Service" maintainer="Andrei Varabyeu <andrei_varabyeu@epam.com>"
 ARG GH_TOKEN
+RUN echo "${GH_TOKEN}"
 RUN apt-get update -qq && apt-get install -qq -y wget fontconfig && \
 	echo 'exec java ${JAVA_OPTS} -jar service-api-5.4.2-exec.jar' > /start.sh && chmod +x /start.sh && \
 	wget --header="Authorization: Bearer ${GH_TOKEN}" -q https://maven.pkg.github.com/Yumfriez/service-api/com/epam/reportportal/service-api/5.4.2/service-api-5.4.2-exec.jar
