@@ -8,8 +8,6 @@ on:
       - '.github/**'
       - README.md
       - gradle.properties
-      - Dockerfile
-      - project-properties.gradle
 
 env:
   GH_USER_NAME: github.actor
